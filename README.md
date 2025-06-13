@@ -4,12 +4,13 @@ Authors: Markus Lemberg, Aksel Kaasik, Kristjan Säärits
 ## Installation (local)
 Follow the instructions on official website: https://www.postgresql.org/download/
 
-#### Create the Database
+#### Create postgres user
 You may need to create a user postgres and set a password via psql. <br>
-Then create the database: <br>
+
+#### Then create the database:
 ```$ createdb -h localhost -U postgres jooksumaraton```
 
-### Deploy the Schema and Data
+#### Deploy the Schema with mock data
 ```$ psql -h localhost -U postgres -d jooksumaraton -f jooksumaraton.sql```
 
 ## Installation (Docker)
@@ -17,6 +18,9 @@ Make sure that the port can be used <br>
 ```# docker-compose up -d```
 <br>
 ```# docker start estonian_marathons_db```
+
+## Connect to the jooksumaraton database using psql client (default password with docker: "password")
+```$ psql -h localhost -U postgres -d jooksumaraton```
 
 
 ## About the Project
