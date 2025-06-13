@@ -12,3 +12,7 @@ Then create the database: <br>
 ### Deploy the Schema and Data
 ```psql -h localhost -U postgres -d jooksumaraton -f jooksumaraton.sql```
 
+## Installation (Docker)
+Make sure that the port can be used <br>
+```# docker-compose up -d```
+```# docker start estonian_marathons_db```
