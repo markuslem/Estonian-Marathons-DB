@@ -7,10 +7,10 @@ Follow the instructions on official website: https://www.postgresql.org/download
 #### Create the Database
 You may need to create a user postgres and set a password via psql. <br>
 Then create the database: <br>
-```createdb -h localhost -U postgres jooksumaraton```
+```$ createdb -h localhost -U postgres jooksumaraton```
 
 ### Deploy the Schema and Data
-```psql -h localhost -U postgres -d jooksumaraton -f jooksumaraton.sql```
+```$ psql -h localhost -U postgres -d jooksumaraton -f jooksumaraton.sql```
 
 ## Installation (Docker)
 Make sure that the port can be used <br>
@@ -35,7 +35,8 @@ The database tables were designed using DB Designer. Our project: https://erd.db
 * Me oletame, et kõigil maratonidel on peasponsor
 
 ### Views
-V_top3_distants - Loome vaate, mis kuvab kõikide maratonide peale kokku kõige rohkem jooksnud sportlased. Esitame parimad 3.
+V_top3_distants - Loome vaate, mis kuvab kõikide maratonide peale kokku kõige rohkem jooksnud sportlased. Esitame parimad 3. 
+
 V_võidetudauhinnad - kuvab inimesed ja nende võidetud auhindade väärtused kahanevas järjekorras.
 
 ### Functions 
@@ -45,4 +46,5 @@ f_klubiliikmed(klubi_nimi varchar) - Võtab parameetriks klubi nime ja kuvab sel
 
 ### Stored Procedures
 Sp_uus_maratonide_sari- Lisab uue maratoni. Kui sobivat sponsorit pole, siis annab sellest kasutajale teada ja ei lisa sarja.
-### sp_uus_klubi(klubi_nimi varchar, klubi_asukoht varchar) - Võtab parameetriks klubi nime, ning asukoha ja lisab selle “klubid” tabelisse. Peale lisamist annab teate, et klubi on lisatud.
+
+sp_uus_klubi(klubi_nimi varchar, klubi_asukoht varchar) - Võtab parameetriks klubi nime, ning asukoha ja lisab selle “klubid” tabelisse. Peale lisamist annab teate, et klubi on lisatud.
